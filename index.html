@@ -3,31 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="#">
-  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/icon" sizes="32x32" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <title>Botanical Garden</title>
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
+  <header class="header">
     <div class="container">
-      <div class="site-header__inner">
-        <a class="logo" href="/assets/logo.svg">
-          <img class="logo-image" src="" alt="Botanical Garden">
-          <p class="logo-text">
-            Mist Gardens <span>Museum & Botanical Garden</span>
-          </p>
+      <div class="header-inner flex-group">
+        <a class="logo flex-group" href="index.html">
+          <img class="logo-image" src="/assets/logo.svg" alt="Botanical Garden">
+          <div class="logo-text">
+            <p class="logo-title uppercase letter-spacing-1 fs-title-s fw-500">Mist Gardens</p>
+            <p class="logo-subtitle fs-text-xs">Museum & Botanical Garden</p>
+          </div>
         </a>
         <nav>
-          <ul class="nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Exhibitions</a></li>
-            <li><a href="#">Programs & Events</a></li>
-            <li><a href="#">Store</a></li>
+          <ul class="navigation flex-group fs-text-xs">
+            <li>
+              <a class="fw-700 uppercase letter-spacing-1" href="#">Home</a>
+            </li>
+            <li>
+              <a class="fw-700 uppercase letter-spacing-1" href="#">About</a>
+            </li>
+            <li>
+              <a class="fw-700 uppercase letter-spacing-1" href="#">Exhibitions</a>
+            </li>
+            <li>
+              <a class="fw-700 uppercase letter-spacing-1" href="#">Programs & Events</a>
+            </li>
+            <li>
+              <a class="fw-700 uppercase letter-spacing-1" href="#">Store</a>
+            </li>
           </ul>
         </nav>
-        <a href="#" class="membership-button button"></a>
+        <a href="#" class="membership-button button-white fw-700 uppercase letter-spacing-1 fs-text-xs flex-group">Membership</a>
       </div>
     </div>
   </header>
@@ -36,15 +49,15 @@
     <div class="container">
       <div class="even-columns">
         <div>
-          <h1>A beautiful adventure awaits</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt facilisis nunc</p>
+          <h1 class="fs-title-xl ff-secondary text-dark">A beautiful adventure awaits</h1>
+          <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt facilisis nunc</p>
         </div>
         <div class="flex-group">
-          <a class="button" href="#">Buy Tickets</a>
-          <a class="button" href="#">Learn More</a>
+          <a class="button button-green bg-primary text-white fw-700 uppercase letter-spacing-1 fs-text-xs" href="#">Buy Tickets</a>
+          <a class="button button-white fw-700 uppercase letter-spacing-1 fs-text-xs" href="#">Learn More</a>
         </div>
         <div>
-          <img src="" alt="">
+          <img src="/assets/hero.png" alt="Garden Arch">
         </div>
       </div>
     </div>

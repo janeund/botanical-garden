@@ -1,0 +1,255 @@
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: #343d33;
+	--clr-white: #ffffff;
+	--clr-primary: #475f45;
+	--clr-light-gray: #c4c4c4;
+	--clr-light-green: #414840;
+
+  /* font-sizes */
+  --fs-title-xl: 3.562rem;
+  --fs-title-l: 2.812rem;
+  --fs-title-m: 2.125rem;
+  --fs-title-s: 1.438rem;
+  --fs-text-default: 1.25rem;
+  --fs-text-s: 1rem;
+  --fs-text-xs: 0.875rem;
+  
+  /* font-families */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Libre Baskerville", serif;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* body */
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text-default);
+  color: var(--clr-primary);
+  /* background-color: hsl( var(--clr-white) ); */
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex-group {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+/* .flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+  --flow-space: .75rem;
+} */
+
+.container {
+  padding-inline: 30px;
+  margin-inline: auto;
+  max-width: 1260px;
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+
+.bg-primary { background-color: var(--clr-primary); }
+.bg-white { background-color: var(--clr-white); }
+.bg-dark { background-color: var(--clr-dark); }
+.bg-light { background-color: var(--clr-light-green); }
+
+.text-primary { color: var(--clr-primary); }
+.text-white { color: var(--clr-white); }
+.text-dark { color: var(--clr-dark); }
+.text-light { color: var(--clr-light-green); }
+
+/* typography */
+
+.ff-primary{ font-family: var(--ff-primary); } 
+.ff-secondary { font-family: var(--ff-secondary); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-title-xl { font-size: var(--fs-title-xl); }
+.fs-title-l { font-size: var(--fs-title-l); }
+.fs-title-m { font-size: var(--fs-title-m); }
+.fs-title-s { font-size: var(--fs-title-s); }
+.fs-xs { font-size: var(--fs-xs); }
+.fs-text-default { font-size: var(--fs-text-default); }
+.fs-text-xs { font-size: var(--fs-text-xs); }
+
+.fw-700 { font-weight: 700;}
+.fw-500 { font-weight: 500;}
+.fw-400 { font-weight: 400;}
+.fw-300 { font-weight: 300;}
+
+.letter-spacing-1 { letter-spacing: 2.4px; } 
+.letter-spacing-2 { letter-spacing: 1.6px; }  
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+/* header */
+.header {
+  height: 88px;
+  padding: 14px;
+}
+
+/* header logo */
+.logo {
+  flex: 0 1 100%;
+  align-items: center;
+}
+
+.logo-image {
+  flex-grow: 0;
+}
+
+.logo-title {
+  line-height: 1em;
+}
+
+.logo-subtitle {
+  font-style: italic;
+}
+
+
+/* header navigation */
+.navigation {
+  align-items: center;
+  list-style: none;
+  gap: 39px;
+  line-height: 1.4em;
+}
+
+.header-inner,
+.navigation  {
+  align-items: center;
+}
+
+.navigation li a {
+  white-space: nowrap;
+}
+
+.membership-button {
+  align-self: center;
+  margin-left: 39px;
+}
+
+
+.button-white {
+  border: 2px solid var(--clr-dark);
+  padding: 10px 25px;
+}
+
+.button-green {
+  border: 2px solid var(--clr-primary);
+  padding: 10px 25px;
+}
