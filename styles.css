@@ -16,6 +16,7 @@
   --fs-title-l: 2.812rem;
   --fs-title-m: 2.125rem;
   --fs-title-s: 1.438rem;
+  --fs-text-l: 1.562rem;
   --fs-text-default: 1.25rem;
   --fs-text-s: 1rem;
   --fs-text-xs: 0.875rem;
@@ -102,8 +103,8 @@ body {
   /* background-color: hsl( var(--clr-white) ); */
   line-height: 1.5;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
+  /* display: grid;
+  grid-template-rows: min-content 1fr; */
   overflow-x: hidden;
 }
 
@@ -120,17 +121,13 @@ body {
 
 .grid {
   display: grid;
-  gap: var(--gap, 1rem);
+  gap: var(--gap, 1);
 }
 
 .d-block {
   display: block;
 }
 
-.even-columns {
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
 
 /* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
@@ -185,7 +182,8 @@ body {
 .fs-title-l { font-size: var(--fs-title-l); }
 .fs-title-m { font-size: var(--fs-title-m); }
 .fs-title-s { font-size: var(--fs-title-s); }
-.fs-xs { font-size: var(--fs-xs); }
+.fs-text-l { font-size: var(--fs-text-l); }
+.fs-text-s { font-size: var(--fs-text-s); }
 .fs-text-default { font-size: var(--fs-text-default); }
 .fs-text-xs { font-size: var(--fs-text-xs); }
 
@@ -204,7 +202,8 @@ body {
 /* header */
 .header {
   height: 88px;
-  padding: 14px;
+  padding: 14px 0;
+  margin-bottom: 50px;
 }
 
 /* header logo */
@@ -230,7 +229,7 @@ body {
 .navigation {
   align-items: center;
   list-style: none;
-  gap: 39px;
+  gap: 2.4375em;
   line-height: 1.4em;
 }
 
@@ -246,15 +245,38 @@ body {
 .membership-button {
   align-self: center;
   margin-left: 39px;
+  padding: 0.625em 1.5625em;
 }
 
+.even-columns {
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: min(6vw, 6rem);
+}
+
+.even-columns > *:last-child  {
+  justify-self: end;
+}
+
+.hero-title {
+  line-height: 1.1;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  padding: 0.9375em 2.25em;
+}
 
 .button-white {
   border: 2px solid var(--clr-dark);
-  padding: 10px 25px;
 }
 
 .button-green {
   border: 2px solid var(--clr-primary);
-  padding: 10px 25px;
 }
