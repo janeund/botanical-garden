@@ -127,6 +127,11 @@ body {
   display: block;
 }
 
+.even-columns {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
 /* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
