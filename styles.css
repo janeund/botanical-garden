@@ -346,6 +346,33 @@ body {
   column-gap: 2rem;
 }
 
+.post-link {
+  position: relative;
+  display: block;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.post-link::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background: var(--clr-primary);
+  bottom: 50%;
+  left: 0;
+}
+
+.post-link::after {
+  content: url(./assets/arrow-right.svg);
+  position: absolute;
+  transform: translateY(-10%);
+  padding-left: 8px;
+}
+
 .card-small {
   display: flex;
 }
@@ -370,6 +397,7 @@ body {
 
 .card-inner {
   padding: 20px;
+  max-width: 500px;
 }
 
 .date {
@@ -387,7 +415,7 @@ body {
   padding: 50px;
 }
 
-.flex-footer {
+.footer-flex {
   justify-content: space-between;
 }
 
@@ -410,6 +438,19 @@ body {
 
 .subscribe {
   margin-top: 20px;
+}
+
+.sitemap-list {
+  padding: 0;
+}
+
+.sitemap-list li:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.social-flex {
+  column-gap: 10px;
+  padding-left: 0;
 }
 
 .footer-legal {
