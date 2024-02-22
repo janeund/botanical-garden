@@ -67,6 +67,10 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
 /* make images easier to work with */
 img,
 picutre {
@@ -114,7 +118,7 @@ body {
 
 /* general */
 
-.flex-group {
+.flex {
   display: flex;
   gap: var(--gap, 1rem);
 }
@@ -334,7 +338,7 @@ body {
 
 /* news section */
 .news {
-
+  padding: 50px;
 }
 
 .news-grid {
@@ -376,4 +380,40 @@ body {
 .post-group {
   display: flex;
   flex-direction: column;
+}
+
+/* footer */
+.footer-wrapper {
+  padding: 50px;
+}
+
+.flex-footer {
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+.form-input {
+  padding: 5px 20px;
+  border: 1px solid var(--clr-light-gray);
+}
+
+.button-subcribe {
+  padding: 10px 10px;
+  border: 0;
+}
+
+.subscribe {
+  margin-top: 20px;
+}
+
+.footer-legal {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
